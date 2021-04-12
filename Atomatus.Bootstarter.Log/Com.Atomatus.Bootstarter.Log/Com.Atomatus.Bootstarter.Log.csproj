@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <Authors>Carlos Matos</Authors>
+    <Company>Atomatus</Company>
+    <Copyright>®2020-2021 Atomatus - All rights reserved</Copyright>
+    <Description>Bootstarter library for log with serilog and elasticsearch</Description>
+    <PackageId>Com.Atomatus.BootStarter.Log</PackageId>
+    <PackageTags>ef boot starter log elasticsearch elastic stack</PackageTags>
+    <PackageVersion>0.0.1</PackageVersion>
+    <PackageIconUrl>https://raw.githubusercontent.com/atomatus/design-template/master/logos/atomatus/logo512x512.png?token=ACNS4LJJGHPDFLXVQRCXN5TAPW3JK</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/atomatus/dot-net-boot-starter-log</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/atomatus/dot-net-boot-starter-log</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
