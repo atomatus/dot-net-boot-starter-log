@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -135,6 +136,36 @@ namespace Com.Atomatus.Bootstarter
         public static ILoggerFactory UseLogServiceWithElasticsearch([NotNull] this ILoggerFactory loggerFactory)
         {
             return loggerFactory.AddSerilog(dispose: true);
+        }
+
+        /// <summary>
+        /// To use log with elasticsearch inputing configuration 
+        /// values, create into <i>appsettings.json</i> project 
+        /// the follow field:
+        /// <code>
+        /// "Elasticsearch": {<br/>
+        ///  "Url": "http://localhost:5151/elasticsearch",<br/>
+        ///  "Appname":  "YourAppNameInElasticsearch"<br/>
+        /// },
+        /// </code>
+        /// or create the follow simple field within only elasticsearch url,
+        /// then the app name will be the current execunting assembly name.
+        /// <code>
+        /// "Elasticsearch": "http://localhost:5151/elasticsearch"
+        /// </code>
+        /// <para>
+        /// or create an environment variable to elasticsearch url.<br/><br/>
+        /// "ELASTICSEARCH_URL": "http://localhost:5151/elasticsearch"
+        /// </para>
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="loggerFactory"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseLogServiceWithElasticsearch([NotNull] IApplicationBuilder app, [AllowNull] ILoggerFactory loggerFactory = null)
+        {
+            loggerFactory ??= app.ApplicationServices.GetService<ILoggerFactory>();
+            loggerFactory.UseLogServiceWithElasticsearch();
+            return app;
         }
     }
 }
