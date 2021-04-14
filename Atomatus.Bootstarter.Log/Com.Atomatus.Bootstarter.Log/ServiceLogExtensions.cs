@@ -92,7 +92,8 @@ namespace Com.Atomatus.Bootstarter
                 throw new InvalidOperationException("Is not possible initialize log with elasticsearch because:\n" +
                     "Elasticsearch url is not set in appsettings.json nor like environment variable.\n\n" +
                     "\t-> To set on appsetings.json use the following pattern:\n" +
-                    "\t\t'\"Elastiseach\": \"https://elasticsearch_url\"' or '\"Elastiseach\": { \"Url\": \"https://elasticsearch_url\", \"Appname\": \"My app name\" }'\n\n" +
+                    "\t\t'\"Elastiseach\": \"https://elasticsearch_url\"' or " +
+                    "\t\t'\"Elastiseach\": { \"Url\": \"https://elasticsearch_url\", \"Appname\": \"My app name\" }'\n\n" +
                     "\t-> To set as environment variable use:\n" +
                     "\t\t \"ELASTICSEARCH_URL\"=\"https://elasticsearch_url\"");
             }
