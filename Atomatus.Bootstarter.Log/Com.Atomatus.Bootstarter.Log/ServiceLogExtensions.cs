@@ -11,10 +11,18 @@ using System.Reflection;
 
 namespace Com.Atomatus.Bootstarter
 {
+    /// <summary>
+    /// Service Log extensions.
+    /// </summary>
     public static class ServiceLogExtensions
     {
         private static readonly EnvironmentVariable ElasticsearchUrl = "ELASTICSEARCH_URL";
 
+        /// <summary>
+        /// Add <see cref="Log.Logger"/> as ILogger service.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddLogService([NotNull] this IServiceCollection services)
         {
             return services
@@ -41,8 +49,8 @@ namespace Com.Atomatus.Bootstarter
         /// "ELASTICSEARCH_URL": "http://localhost:5151/elasticsearch"
         /// </para>
         /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
+        /// <param name="builder">program initialization builder</param>
+        /// <returns>program initialization builder</returns>
         public static IHostBuilder UseLogServiceWithElasticsearch([NotNull] this IHostBuilder builder)
         {
             return builder
@@ -74,8 +82,9 @@ namespace Com.Atomatus.Bootstarter
         /// "ELASTICSEARCH_URL": "http://localhost:5151/elasticsearch"
         /// </para>
         /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
+        /// <param name="services">current service collection</param>
+        /// <param name="configuration">optional configuration values</param>
+        /// <returns>current service collection</returns>
         public static IServiceCollection AddLogServiceWithElasticsearch([NotNull] this IServiceCollection services, [AllowNull] IConfiguration configuration = null)
         {
             if(configuration is null)
@@ -132,8 +141,8 @@ namespace Com.Atomatus.Bootstarter
         /// "ELASTICSEARCH_URL": "http://localhost:5151/elasticsearch"
         /// </para>
         /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
+        /// <param name="loggerFactory">factory to create ILogger instance to perform logging</param>
+        /// <returns>current logger factory</returns>
         public static ILoggerFactory UseLogServiceWithElasticsearch([NotNull] this ILoggerFactory loggerFactory)
         {
             return loggerFactory.AddSerilog(dispose: true);
