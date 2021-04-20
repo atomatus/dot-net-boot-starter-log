@@ -16,6 +16,27 @@ namespace Com.Atomatus.Bootstarter
     /// </summary>
     public static class ServiceLogExtensions
     {
+        private struct EnvironmentVariable
+        {
+            private readonly string name;
+
+            public EnvironmentVariable(string name)
+            {
+                this.name = name;
+            }
+
+            public string GetValueOrDefault(string defaultValue)
+            {
+                string aux = Environment.GetEnvironmentVariable(name);
+                return string.IsNullOrWhiteSpace(aux) ? (defaultValue ?? "") : aux;
+            }
+
+            public static implicit operator EnvironmentVariable(string name)
+            {
+                return new EnvironmentVariable(name);
+            }
+        }
+
         private static readonly EnvironmentVariable ElasticsearchUrl = "ELASTICSEARCH_URL";
 
         /// <summary>
