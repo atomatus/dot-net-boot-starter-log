@@ -1,4 +1,8 @@
-# .Net Boot Starter Log ⊞📦💻📱📋
+# Atomatus Boot Starter Log ⊞📦💻📱📋
+
+[![GitHub issues](https://img.shields.io/github/issues/atomatus/dot-net-boot-starter-log?style=flat-square&color=%232EA043&label=help%20wanted)](https://github.com/atomatus/dot-net-boot-starter-log)
+
+[![NuGet version (Com.Atomatus.BootStarter)](https://img.shields.io/nuget/v/Com.Atomatus.BootStarter.Log.svg?style=flat-square)](https://www.nuget.org/packages/Com.Atomatus.BootStarter.Log/)
 
 **`Com.Atomatus.Bootstarter.Log`** is a C# library that simplifies logging in .NET applications, providing various extensions and configurations for the popular Serilog logger. This library is designed to streamline the setup of logging with Serilog, particularly for scenarios involving Elasticsearch as the log storage.
 
