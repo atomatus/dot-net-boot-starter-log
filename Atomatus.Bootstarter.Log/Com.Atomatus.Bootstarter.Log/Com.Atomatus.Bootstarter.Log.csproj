@@ -7,7 +7,7 @@
     <Authors>Atomatus</Authors>
     <Company>Atomatus</Company>
     <Copyright>®2020-2023 Atomatus - All rights reserved</Copyright>
-    <Description>Bootstarter library for log with serilog and elasticsearch</Description>
+    <Description>Bootstarter library for log with serilog and elasticsearch. Is a handy library that simplifies and streamlines logging in .NET applications, especially when using Serilog with Elasticsearch. It offers easy configuration, extensions for different log levels, and enhanced log message context information. By following the steps outlined in this guide, you can quickly get started with efficient logging in your .NET projects.</Description>
     <PackageId>Com.Atomatus.BootStarter.Log</PackageId>
     <PackageTags>ef boot starter log elasticsearch elastic stack</PackageTags>
     <PackageVersion>0.0.11</PackageVersion>
