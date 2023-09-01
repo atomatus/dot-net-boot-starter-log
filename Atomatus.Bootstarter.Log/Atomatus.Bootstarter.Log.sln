@@ -8,6 +8,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E18DCE60-F9BF-4247-889C-550535031384}"
 	ProjectSection(SolutionItems) = preProject
 		..\.github\workflows\nuget-cicd.yml = ..\.github\workflows\nuget-cicd.yml
+		..\logo.png = ..\logo.png
+		..\privatekey.snk = ..\privatekey.snk
+		..\public.snk = ..\public.snk
+		..\README.md = ..\README.md
+		..\.gitignore = ..\.gitignore
 	EndProjectSection
 EndProject
 Global
