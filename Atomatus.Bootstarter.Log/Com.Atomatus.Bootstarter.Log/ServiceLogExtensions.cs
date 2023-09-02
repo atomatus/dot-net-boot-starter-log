@@ -16,7 +16,7 @@ namespace Com.Atomatus.Bootstarter
     /// </summary>
     public static class ServiceLogExtensions
     {
-        private struct EnvironmentVariable
+        private readonly struct EnvironmentVariable
         {
             private readonly string name;
 
