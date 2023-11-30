@@ -10,7 +10,7 @@
     <Description>Bootstarter library for log with serilog and elasticsearch. Is a handy library that simplifies and streamlines logging in .NET applications, especially when using Serilog with Elasticsearch. It offers easy configuration, extensions for different log levels, and enhanced log message context information. By following the steps outlined in this guide, you can quickly get started with efficient logging in your .NET projects.</Description>
     <PackageId>Com.Atomatus.BootStarter.Log</PackageId>
     <PackageTags>ef boot starter log elasticsearch elastic stack</PackageTags>
-    <PackageVersion>0.0.11</PackageVersion>
+    <PackageVersion>0.0.12</PackageVersion>
     <PackageIcon>logo.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIconUrl>https://raw.githubusercontent.com/atomatus/design-template/master/logos/atomatus/logo512x512.png?token=ACNS4LJJGHPDFLXVQRCXN5TAPW3JK</PackageIconUrl>
@@ -22,8 +22,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\privatekey.snk</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>1.0.0.11</AssemblyVersion>
-    <FileVersion>1.0.0.11</FileVersion>
+    <AssemblyVersion>1.0.0.12</AssemblyVersion>
+    <FileVersion>1.0.0.12</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -40,10 +40,11 @@
   <ItemGroup>    
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="9.0.3" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
   </ItemGroup>
 
 </Project>
